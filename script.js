@@ -12,7 +12,7 @@ let inputData = ""
 let page = 1;
 
 async function searchimages() {
-    console.log("bgvnvgv");
+    // console.log("bgvnvgv");
     inputData = inputel.value;
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accesskey}`;
 
@@ -20,7 +20,7 @@ async function searchimages() {
 
     const data = await response.json()
     const result = data.results
-    console.log(result[0]);
+    // console.log(result[0]);
     // console.log();
 
     // if (page === 1) {
@@ -54,9 +54,8 @@ async function searchimages() {
         
     });
     page++
-    console.log(search_result);
     search_result.innerHTML = image_div
-    if (page > 1) {
+    if (page >= 1) {
         showmorebutton.style.display = "block"
     }
 }
@@ -66,10 +65,10 @@ formel.addEventListener("submit", (event) => {
     page = 1;
     searchimages()
 })
-searchbutton.addEventListener("click", function () {
+searchbutton.addEventListener("click",  () => {
     searchimages()
-})
+});
 
-showmorebutton.addEventListener("click", function () {
+showmorebutton.addEventListener("click",  () => {
     searchimages()
-})
+});

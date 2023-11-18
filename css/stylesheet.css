@@ -7,6 +7,9 @@
     /* font-family: 'Lato', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
+h2{
+    text-align: center;
+}
 
 body {
     line-height: 1.5;
@@ -83,9 +86,6 @@ body {
     display: block;
 }
 
-.showmore-button {
-    /* text-align: center; */
-}
 
 #show-more {
     background-color: rgb(63, 123, 146);
